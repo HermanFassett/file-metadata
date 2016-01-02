@@ -16,8 +16,9 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname+"/index.html"));
 });
+
 app.post('/analyze', function(req, res) {
-  res.json({"hi": "bye"});
+  res.json(req.body);
 });
 
 app.listen(process.env.PORT || 3000);
