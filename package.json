@@ -1,0 +1,11 @@
+{
+  "name": "file-metadata",
+  "version": "0.0.1",
+  "description": "Basejump: File Metadata Microservice",
+  "main": "server.js",
+  "repository": "",
+  "author": "Herman Fassett",
+  "dependencies": {
+    "express": "~4.13.3"
+  }
+}
