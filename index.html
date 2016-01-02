@@ -11,24 +11,14 @@
 </head>
 <body>
   <div class="container">
-  <form action="analyze" method="post">
+  <form action="analyze" method="post" enctype="multipart/form-data">
     <div class="form-group" name="form">
-      <label for="exampleInputFile">File input</label>
+      <label for="inputFile">File input</label>
       <input type="file" name="file">
-      <input type="hidden" name="filedata" id="file-data">
       <p class="help-block">File Metadata Microservice</p>
     </div>
     <button type="submit" class="btn btn-default">Upload</button>
   </form>
   </div>
-  <script type="text/javascript">
-		$(document).ready(function() {
-			$('input[type=file]').on('change', function() {
-        var file = event.target.files[0];
-        console.log(file);
-        $("#file-data").val(JSON.stringify({"size": file.size, "type": file.type}));
-			});
-		});
-	</script>
 </body>
 </html>
