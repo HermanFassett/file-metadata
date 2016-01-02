@@ -15,7 +15,7 @@
     <div class="form-group" name="form">
       <label for="exampleInputFile">File input</label>
       <input type="file" name="file">
-      <input type="hidden" name="filesize" id="file-data">
+      <input type="hidden" name="filedata" id="file-data">
       <p class="help-block">File Metadata Microservice</p>
     </div>
     <button type="submit" class="btn btn-default">Upload</button>
@@ -24,7 +24,9 @@
   <script type="text/javascript">
 		$(document).ready(function() {
 			$('input[type=file]').on('change', function() {
-        $("#file-data").val(event.target.files[0].size);
+        var file = event.target.files[0];
+        console.log(file);
+        $("#file-data").val(JSON.stringify({"size": file.size, "type": file.type}));
 			});
 		});
 	</script>

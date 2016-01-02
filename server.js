@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/analyze', function(req, res) {
-  res.json(req.body);
+  res.json({"filename": req.body.file, "data": JSON.parse(req.body.filedata)});
 });
 
 app.listen(process.env.PORT || 3000);
