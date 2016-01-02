@@ -1,9 +1,12 @@
+// Requirements
 var http = require('http');
 var path = require('path');
 var express = require('express');
 var multer = require('multer');
 var fs = require("fs");
+// Set upload folder
 var upload = multer({ dest: 'uploads/'});
+// init app
 var app = express();
 // Set access control
 app.use(function(req, res, next) {
